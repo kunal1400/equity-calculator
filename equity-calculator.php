@@ -34,6 +34,8 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function equity_calculator_enqueue_script() {
     wp_enqueue_script( 'equity_calculator_modal', plugin_dir_url( __FILE__ ) . 'js/model.js', array('jquery'), '1.0' );
+    wp_enqueue_script( 'jspdf', plugin_dir_url( __FILE__ ) . 'js/jspdf.min.js', array('jquery'), '1.0' );
+    wp_enqueue_script( 'jspdf_autotable', plugin_dir_url( __FILE__ ) . 'js/jspdf.plugin.autotable.min.js', array('jquery'), '1.0' );
     // wp_localize_script( 'simple_jobs_js', 'simple_jobs_js_var', array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'we_value' => 1234 ) );
     wp_enqueue_style( 'equity_calculator_front_css', plugin_dir_url( __FILE__ ) . 'css/front.css');
 }

@@ -1,4 +1,4 @@
-<div class="container">      
+<div id="calculatorContainer" class="container">      
   <div id="calculator" class="row">
     <div class="col-12">
       <h2>Calculator</h2>
@@ -113,8 +113,22 @@
         </tr>
       </tbody></table>
     </div>
-  </div>  
+  </div>
+  <div id="ignorePDF" class="row">
+    <div class="col-md-12">
+      <?php 
+        if( is_user_logged_in() ) {
+          echo '<button type="button" onclick="downloadPdf('.get_current_user_id().')" class="btn btn-primary">Download Pdf</button>';
+        }
+        else {
+          echo '<button type="button" onclick="downloadPdf()" class="btn btn-primary">Download Pdf</button>';          
+        }
+      ?>
+      <button type="button" class="btn btn-primary">Send To Email</button>
+    </div>
+  </div>
 </div>
+
 <script type="text/javascript">
   jQuery(document).ready(function() {
     init();
