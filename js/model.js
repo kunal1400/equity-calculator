@@ -272,9 +272,11 @@ function downloadPdf( currentUserId ) {
       doc.setTextColor(40);
       doc.setFontStyle('normal');
       if (base64Img) {
-        doc.addImage(base64Img, 'JPEG', data.settings.margin.left, 15, 30, 30);
+        doc.addImage(base64Img, 'JPEG', data.settings.margin.left, 15, 50, 30);
       }
-      doc.text("Compensation \n& Equity Report", data.settings.margin.right + 30, 22); 
+      doc.text("Compensation \n& Equity Report", data.settings.margin.right + 135, 22);
+      doc.setFontSize(9);
+      doc.text("Date: (Custom Script)", data.settings.margin.right + 135, 40);
 
       // FOOTER
       var str = "Page " + data.pageCount;
