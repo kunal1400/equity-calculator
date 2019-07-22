@@ -7,6 +7,20 @@
   <div class="row">
     <div class="col-md-6 col-sm-12">
       <div class="field">
+        <h4>Name</h4>
+        <input id="userName" type="email" >
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="field">
+        <h4>Email</h4>
+        <input id="userEmail" type="email" >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="field">
         <h4>Salary component</h4>
         <div class="explainer">Gross yearly salary in USD</div>
         <div style="position: relative;">
@@ -124,7 +138,7 @@
           echo '<button type="button" onclick="downloadPdf()" class="btn btn-primary">Download Pdf</button>';          
         }
       ?>
-      <button type="button" class="btn btn-primary">Send To Email</button>
+      <!-- <button type="button" class="btn btn-primary">Send To Email</button> -->
     </div>
   </div>
 </div>
