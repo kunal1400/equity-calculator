@@ -1,4 +1,4 @@
-<div id="calculatorContainer" class="container1">      
+<div id="calculatorContainer" class="">      
   <div id="calculator" class="row">
     <div class="col-12">
       <h2>Calculator</h2>
