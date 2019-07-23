@@ -1031,7 +1031,7 @@ input {
 }
 
 .field {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .explainer {
@@ -1050,14 +1050,16 @@ input {
   font-size: 1.2em;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.20);
   padding: 6px 12px;
   width: 200px;
   border: 1px solid #C0C0C0;
   border-radius: 8px;
   outline: none;
-  font-weight: 16px;
+  font-size: 16px !important;
+  margin-left: 0px !important;
 }
 
 input[type="text"]:focus {
@@ -1111,6 +1113,14 @@ table, th, td {
 }
 
 .buttonColor {
-  background-color:#ff9900; 
-  color:#ffffff;
+  background-color: #ff9900;
+  color: #ffffff;
+  font-size: 14px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  width: 100%;
+  border: none;
 }

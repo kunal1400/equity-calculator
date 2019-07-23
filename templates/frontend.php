@@ -1,7 +1,7 @@
 <div id="calculatorContainer" class="">      
   <div id="calculator" class="row">
     <div class="col-12">
-      <h2>Calculator</h2>
+      <h2 style="margin-left: 12px;margin-bottom: 30px;">Calculator</h2>
     </div>
   </div>  
   <div class="row">
@@ -140,10 +140,10 @@
     <div class="col-md-12">
       <?php 
         if( is_user_logged_in() ) {
-          echo '<button type="button" onclick="downloadPdf('.get_current_user_id().')" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Download PDF Report</button>';
+          echo '<button type="button" onclick="downloadPdf('.get_current_user_id().')" class="buttonColor">Download PDF Report</button>';
         }
         else {
-          echo '<button type="button" onclick="downloadPdf()" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Download Pdf</button>';          
+          echo '<button type="button" onclick="downloadPdf()" class="buttonColor">Download Pdf</button>';          
         }
       ?>
       <!-- <button type="button" class="btn btn-primary">Send To Email</button> -->
