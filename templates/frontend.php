@@ -1,30 +1,16 @@
-<div id="calculatorContainer" class="container">      
+<div id="calculatorContainer" class="container1">      
   <div id="calculator" class="row">
     <div class="col-12">
       <h2>Calculator</h2>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 col-sm-12">
-      <div class="field">
-        <h4>Name</h4>
-        <input id="userName" type="email" >
-      </div>
-    </div>
-    <div class="col-md-6 col-sm-12">
-      <div class="field">
-        <h4>Email</h4>
-        <input id="userEmail" type="email" >
-      </div>
-    </div>
-  </div>
+  </div>  
   <div class="row">
     <div class="col-md-6 col-sm-12">
       <div class="field">
         <h4>Salary component</h4>
         <div class="explainer">Gross yearly salary in USD</div>
         <div style="position: relative;">
-          <input id="salary" type="text" data-numbertype="dollar" data-decimals="0" style="padding-left: 22px; width: 190px;"><span style="position: absolute; left: 2px; top: 7px; ">$</span>
+          <input id="salary" type="text" data-numbertype="dollar" data-decimals="0" style="padding-left: 22px; width: 190px;"><span style="position: absolute;left: 10px;top: 7px;">$</span>
         </div>
       </div>
       <div class="field">
@@ -66,7 +52,7 @@
         <h4>Strike price</h4>
         <div class="explainer">Price at which you can purchase your options</div>
         <div style="position: relative;">
-          <input id="strike-price" type="text" data-numbertype="regular" data-decimals="2" style="padding-left: 22px; width: 190px;"><span style="position: absolute; left: 2px; top: 7px; ">$</span>
+          <input id="strike-price" type="text" data-numbertype="regular" data-decimals="2" style="padding-left: 22px; width: 190px;"><span style="position: absolute;left: 10px;top: 7px;">$</span>
         </div>
       </div>
       <div class="field">
@@ -128,14 +114,36 @@
       </tbody></table>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="field">
+        <h4>First Name</h4>
+        <input id="userName" type="email" >
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="field">
+        <h4>Last Name</h4>
+        <input id="userName" type="email" >
+      </div>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="field">
+        <h4>Email</h4>
+        <input id="userEmail" type="email" class="form-control" style="width: 100%" >
+      </div>
+    </div>
+  </div>
   <div id="ignorePDF" class="row">
     <div class="col-md-12">
       <?php 
         if( is_user_logged_in() ) {
-          echo '<button type="button" onclick="downloadPdf('.get_current_user_id().')" class="btn btn-primary">Download Pdf</button>';
+          echo '<button type="button" onclick="downloadPdf('.get_current_user_id().')" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Download PDF Report</button>';
         }
         else {
-          echo '<button type="button" onclick="downloadPdf()" class="btn btn-primary">Download Pdf</button>';          
+          echo '<button type="button" onclick="downloadPdf()" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Download Pdf</button>';          
         }
       ?>
       <!-- <button type="button" class="btn btn-primary">Send To Email</button> -->

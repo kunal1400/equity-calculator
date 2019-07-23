@@ -271,7 +271,7 @@ function downloadPdf( currentUserId ) {
       doc.setTextColor(40);
       doc.setFontStyle('normal');
       if (base64Img) {
-        doc.addImage(base64Img, 'JPEG', data.settings.margin.left, 15, 50, 30);
+        doc.addImage(base64Img, 'JPEG', data.settings.margin.left, 15, 60, 30);
       }
       doc.text("Compensation \n& Equity Report", data.settings.margin.right + 135, 22);
       doc.setFontSize(9);
@@ -306,7 +306,7 @@ function downloadPdf( currentUserId ) {
       doc.putTotalPages(totalPagesExp);
     }
 
-    doc.save("equity_calculator.pdf");
+    doc.save("The Hiring Advisors Startup Equity Compensation.pdf");
 
 }
 
