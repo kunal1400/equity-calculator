@@ -298,7 +298,7 @@ function downloadPdf( currentUserId ) {
       }
     });    
 
-    var str2 = "Email: info@thehiringadvisors.com, \nPhone: (310) 504-3049 Monday – Friday 8AM – 5PM \n727 2nd Street, Ste 205 Hermosa Beach, CA 90254 \nwww.hehiringadvisors.com";
+    var str2 = "Contact: info@thehiringadvisors.com, (310) 504-3049, Hours: Monday – Friday 8AM – 5PM \n727 2nd Street, Ste 205 Hermosa Beach, CA 90254 \nwww.hehiringadvisors.com";
     doc.text(40, 210, str2);
 
     // Total page number plugin only available in jspdf v1.0+
