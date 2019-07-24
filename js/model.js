@@ -349,7 +349,6 @@ function downloadPdf( currentUserId ) {
 			},
 			createdCell: function (cell, data) {
 				i++;
-				console.log(cell, cell.raw, i, 'cellll')
 				if (i == 41 || i == 42 || i == 43) {
 					// cell.styles.textColor = [200, 0, 0];
 				    cell.styles.fontStyle = 'bold';

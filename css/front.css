@@ -1125,10 +1125,11 @@ table, th, td {
   border: none;
 }
 .getHeading {
-    background-color: #ebeef0;
-    padding: 10px;
-    text-align: center;
-    color: #f3b72b;
-    font-weight: bold;
-    font-style: italic;
+  background-color: #ebeef0;
+  padding: 10px;
+  text-align: center;
+  color: #f3b72b;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 15px !important;
 }
