@@ -115,6 +115,9 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-md-12">
+      <h4 class="getHeading">Get your startup Equity Compensation Assesment</h4>
+    </div>
     <div class="col-md-6 col-sm-12">
       <div class="field">
         <h4>First Name</h4>

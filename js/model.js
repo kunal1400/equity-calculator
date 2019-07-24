@@ -276,23 +276,23 @@ function downloadPdf( currentUserId ) {
       doc.text("Compensation \n& Equity Report", data.settings.margin.right + 120, 25);
       
       doc.setFontSize(9);
-      doc.text("Date: ",171, 45);
+      doc.text("Date: "+dateString, 172, 45);
 
-      doc.setFontSize(9);
-      doc.setTextColor(255,0,0);      
-      doc.text(dateString, data.settings.margin.right + 167, 45);
-
-      doc.setFontSize(12);
-      doc.setTextColor(0,0,0);      
-      doc.text("Hi ", data.settings.margin.left, 65);
-
-      doc.setFontSize(12);
-      doc.setTextColor(255,0,0);      
-      doc.text(userName+",", data.settings.margin.left+5, 65);	  
+      // doc.setFontSize(9);
+      // // doc.setTextColor(255,0,0);      
+      // doc.text(dateString, data.settings.margin.right + 167, 45);
 
       doc.setFontSize(12);
       doc.setTextColor(0,0,0);      
-	  var str3 = "Here is Compensation and Equity. If you have any questions or need a career consultation please \nreach out to us at anytime.";
+      doc.text("Hi "+userName+",", data.settings.margin.left, 65);
+
+      // doc.setFontSize(12);
+      // doc.setTextColor(255,0,0);      
+      // doc.text(userName+",", data.settings.margin.left+5, 65);	  
+
+      doc.setFontSize(12);
+      doc.setTextColor(0,0,0);      
+	  var str3 = "Here is your Compensation and Equity assessment report. If you have any questions or need a \ncareer consultation please reach out to us at anytime.";
       doc.text(str3, data.settings.margin.left, 75);
 
       doc.setFontSize(12);
@@ -338,13 +338,26 @@ function downloadPdf( currentUserId ) {
       // doc.setFontSize(10);      
       // doc.text(str, data.settings.margin.left, doc.internal.pageSize.height - 10);
     };    
-
-    doc.autoTable(getColumns(), dataToSend, {
-      addPageContent: pageContent,
-      margin: {
-        top: 115,
-      }
-    });    
+    var i = 1;
+	doc.autoTable(
+		getColumns(), 
+		dataToSend, 
+		{
+			addPageContent: pageContent,
+			margin: {
+				top: 115,
+			},
+			createdCell: function (cell, data) {
+				i++;
+				console.log(cell, cell.raw, i, 'cellll')
+				if (i == 41 || i == 42 || i == 43) {
+					// cell.styles.textColor = [200, 0, 0];
+				    cell.styles.fontStyle = 'bold';
+				};
+				return false;
+			}
+		}		
+	);    
 
     // Total page number plugin only available in jspdf v1.0+
     if (typeof doc.putTotalPages === 'function') {
@@ -361,7 +374,7 @@ return [{
 		dataKey: "id"
 	},
 	{
-		title: "Field",
+		title: "Line Items",
 		dataKey: "name"
 	},
 	{
