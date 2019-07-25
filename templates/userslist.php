@@ -1,4 +1,5 @@
 <div class="wrap">
+<h2>Users Equity and Compensation Report</h2>
 <?php 
 if($results) {
 	echo '<table class="widefat fixed" cellspacing="0" >';
@@ -12,7 +13,7 @@ if($results) {
 	foreach ($results as $i => $result) {
 		$data = $result['option_value'];
 		$data = json_decode($data, ARRAY_A);
-		
+
 		// echo "<pre>";
 		// print_r($data);
 		// echo "</pre>";
