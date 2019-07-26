@@ -288,7 +288,7 @@ function downloadPdf( currentUserId ) {
 
       doc.setFontSize(12);
       doc.setTextColor(0,0,0);      
-      doc.text("Hi "+userName+",", data.settings.margin.left, 65);
+      doc.text("Hi "+userName+" "+userLName+",", data.settings.margin.left, 65);
 
       // doc.setFontSize(12);
       // doc.setTextColor(255,0,0);      
@@ -413,7 +413,7 @@ function adminDownloadPdf( userName, userLName, userEmail, data ) {
 
       doc.setFontSize(12);
       doc.setTextColor(0,0,0);      
-      doc.text("Hi "+userName+",", data.settings.margin.left, 65);      
+      doc.text("Hi "+userName+" "+userLName+",", data.settings.margin.left, 65);      
 
       doc.setFontSize(12);
       doc.setTextColor(0,0,0);      
