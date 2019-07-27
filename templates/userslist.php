@@ -4,7 +4,7 @@
 if($results) {
 	echo '<table class="widefat fixed" cellspacing="0" >';
 		echo "<thead><tr>
-				<th width='40'>S.No</th>					
+				<th width='70'>S.No</th>					
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Email</th>
