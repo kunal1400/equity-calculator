@@ -5,8 +5,9 @@ if($results) {
 	echo '<table class="widefat fixed" cellspacing="0" >';
 		echo "<thead><tr>
 				<th width='40'>S.No</th>					
+				<th>First Name</th>
+				<th>Last Name</th>
 				<th>Email</th>
-				<th>Name</th>
 				<th>Action</th>
 			</tr><thead>";
 		echo "<tbody>";
@@ -21,8 +22,9 @@ if($results) {
 
 		echo "<tr>";
 		echo "<td>".($i+1)."</td>";
+		echo "<td>".$data['userName']."</td>";
+		echo "<td>".$data['userLName']."</td>";
 		echo "<td>".$data['userEmail']."</td>";
-		echo "<td>".$data['userName']." ".$data['userLName']."</td>";
 		echo "<td><a href='javascript:void(0)' onclick='adminDownloadPdf(`".$data['userName']."`,`".$data['userLName']."`,`".$data['userEmail']."`, `".json_encode($data['dataToSend'])."`)'>Check Report</a></td>";
 		echo "</tr>";
 	}
